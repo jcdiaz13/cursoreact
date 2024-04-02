@@ -1,8 +1,8 @@
 import { useRef } from "react";
 
 const App = () => {
-    const eurosRef = useRef(null)
-    const dolarsRef = useRef(null)
+    const eurosRef = useRef()
+    const dolarsRef = useRef()
 
     const conversor = () => {
         const euros = eurosRef.current.value;
