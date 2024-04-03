@@ -8,7 +8,7 @@ const App = () => {
     return (
         <div>
             {/* <A></A><B></B><C></C> */}
-            {books.map((book) => <Book key={book.title} book={book} />)}
+            {books.map((book) => <Book key={book.name} book={book} />)}
 
         </div>
     );
