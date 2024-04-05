@@ -5,7 +5,7 @@ import Popup from "./components/Componenteconestilo.jsx";
 const App = () => {
 
     // const [color, setColor] = useState("")
-    const [visible, setVisible] = useState()
+    const [visible, setVisible] = useState(false)
 
     // const setColor = () => {
     //     // MyStyledComponent.componentStyle.backgroundColor = "red"
@@ -13,15 +13,15 @@ const App = () => {
 
 
     return (
-        < div >
+        <div>
             {/* <Box color="blue" m={20}> Hola <span>que</span> tal</Box>
 
             <button onClick={() => setColor('red')}>Cambiar color</button>
             <MyStyledComponent color={color} /> */}
 
-            <button onClick={() => setVisible(!visible)}>Mostrar popup</button>
+            <button onClick={() => setVisible(true)}>Mostrar popup</button>
             <Popup visible={visible} setVisible={setVisible} />
-        </div >
+        </div>
 
     )
 }

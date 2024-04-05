@@ -25,18 +25,20 @@ import styled from "styled-components";
 
 
 export const Back = styled.div`
-    background-color:blue;
+    background: rgba(0,0,0,0.5);
     width: 100vw;
     height: 100vh;
     justify-content: center;
     align-items: center;
-    display: ${ ({visible}) => visible? 'block': 'none'};
+    display: ${({ visible }) => visible ? 'flex' : 'none'};
     position:fixed;
     top:0;
     left:0;
+    padding:10px;
 
     div{
-        background-color: white;
+    background-color: white;
+    text-align: center;
     width: 600px;
     height:600px;
     }
