@@ -18,14 +18,6 @@ img {
     margin-top: 15px;
 }
 `
-
 export const Question = styled.div`
 text-align: center;
-`
-export const Overlay = styled.div`
-background-color: rgba(0, 0, 0, 0.5);
-position:absolute;
-width: 100%;
-height: 100%;
-
 `
