@@ -1,4 +1,5 @@
-import workouts from "./assets/data/workouts"; // Importa la estructura de datos de workouts
+import { useState } from "react";
+import workouts from "./assets/data/workouts";
 import {
   Container,
   ColRight,
@@ -7,23 +8,47 @@ import {
   Menu,
   BtnLeft,
   BtnRight,
+  Img,
 } from "./components/Workout/Workout.styles";
 
 const App = () => {
-  const w = workouts[0];
+  const [currentWorkout, setCurrentWorkout] = useState(0);
+  const [currentEx, setCurrentEx] = useState(0);
+
+  const w = workouts[currentWorkout];
 
   return (
     <Container>
       <Menu>
-        <BtnLeft />
+        <BtnLeft
+          onClick={() =>
+            setCurrentWorkout((prevWorkout) =>
+              prevWorkout > 0 ? prevWorkout - 1 : 0
+            )
+          }
+        ></BtnLeft>
         <h1>{w.title}</h1>
-        <BtnRight />
+        <BtnRight
+          onClick={() =>
+            setCurrentWorkout((prevWorkout) =>
+              prevWorkout < workouts.length - 1 ? prevWorkout + 1 : prevWorkout
+            )
+          }
+        ></BtnRight>
       </Menu>
       <Row>
-        <ColLeft></ColLeft>
+        <ColLeft>
+          <img src={w.exercises[currentEx].img} />
+        </ColLeft>
+
         <ColRight>
-          {w.exercises.map((e) => (
-            <img key={e.img} src={e.img}></img>
+          {w.exercises.map((exercise, i) => (
+            <Img
+              active={i === currentEx}
+              key={exercise}
+              src={exercise.img}
+              onClick={() => setCurrentEx(i)}
+            />
           ))}
         </ColRight>
       </Row>
