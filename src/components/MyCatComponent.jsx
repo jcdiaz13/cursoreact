@@ -9,12 +9,16 @@ const MyCatComponent = () => {
     });
   }, []);
 
-  return(
-    {
-      ninjaCats.map}
-      </div>;
-
-  )
+  return (
+    <div>
+      {ninjaCats.map((cat, index) => (
+        <div key={index}>
+          <h2>Cats Things</h2>
+          <p>{cat.fact}</p>
+        </div>
+      ))}
+    </div>
+  );
 };
 
 export default MyCatComponent;
