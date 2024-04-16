@@ -6,7 +6,8 @@ import ReactDOM from "react-dom/client";
 // import App from './App-teatro'
 // import App from './AppWorkout'
 // import App from "./AppRouter";
-import App from "./App15-04";
+// import App from "./AppPokemon";
+import App from "./AppChuckNorris";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
