@@ -1,7 +1,7 @@
-import PokemonComponent from "./components/PokemonComponent";
+import ChuckNorrisComponent from ChuckNorrisComponent
 
 const App = () => {
-  return <PokemonComponent />;
+  return <ChuckNorrisComponent />;
 };
 
 export default App;

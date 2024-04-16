@@ -7,7 +7,7 @@ import ReactDOM from "react-dom/client";
 // import App from './AppWorkout'
 // import App from "./AppRouter";
 // import App from "./AppPokemon";
-import App from "./AppChuckNorris";
+import App from "./ChuckNorrisComponent";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>

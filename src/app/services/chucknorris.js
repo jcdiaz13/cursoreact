@@ -1,8 +1,15 @@
-import {instance} from '../api/apipokemon';
-export const getJokes = async () => {
+import {instance} from '../api/apichucknorris';
 
-   const response = await instance.get(`/`);
-   return response.data.results;
-}
+export const getCategories = async () => {
+  const response = await instance.get("jokes/categories");
+  return response.data; // Retorna directamente el array de categorías
+};
 
-export default getJokes;
+
+export const getJokeFromCategory = async (category) => { // Obtener un chiste de una categoría específica
+  const response = await instance.get("jokes/random", {
+    params: { category } // Usa el parámetro de categoría para obtener un chiste específico
+  });
+  return response.data; // Retorna directamente el objeto de chiste
+};
+
