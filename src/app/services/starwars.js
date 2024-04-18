@@ -8,8 +8,5 @@ export const getCharacters = async () => {
 
 export const getIdFromUrl = (url) => url.substring(url.lastIndexOf('/', url.lastIndexOf('/') - 1) + 1, url.lastIndexOf('/'));
 
+export const getCharacterById = (id) => i.get(`/people/${id}/`);
 
-export const getCharacterPictures = async () => {
-  const response = await i.get("/url");
-  return response
-}

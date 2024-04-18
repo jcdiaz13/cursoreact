@@ -3,7 +3,6 @@ import { NavLink } from "react-router-dom";
 const Layout = ({ children }) => {
   return (
     <div>
-      <h1>Layout</h1>
       <nav>
         <ul>
           <li>
@@ -14,6 +13,9 @@ const Layout = ({ children }) => {
           </li>
           <li>
             <NavLink to="/product/1">Producto 1</NavLink>
+          </li>
+          <li>
+            <NavLink to="/starwars">Star Wars</NavLink>
           </li>
           {/* <li>
             <Link to="/ajksdfkjhasdk"> Ejemplo de error en la url</Link>
